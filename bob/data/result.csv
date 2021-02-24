@@ -1,0 +1,2 @@
+alice_singles_rate, bob_singles_rate, coincidence_window(ps), coincidence_count_rate, sifted_key_length, num_error, QBER, hv_count,ad_count,alice_efficiency(%), bob_effeciency(%),duration(s),hv_QBER,ad_qber
+5668360.591724,6435515.260194,1500,1396973.005886,6025186,133401,0.022141,3822730,2202456,21.707244,24.645098,8.548903,0.018389,0.028652
