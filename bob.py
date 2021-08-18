@@ -64,6 +64,13 @@ elif command == "genrawkey":
     end = time.time()
     print("[Done] in {0} seconds".format(end-start))
 
+elif command == "siftkey":
+    start = time.time()
+    print("Generating rawkey for [{}]".format("Bob"))
+    om.sift_key()
+    end = time.time()
+    print("[Done] in {0} seconds".format(end-start))
+
 else:
     print ("Error:unknown command")
     exit(1)

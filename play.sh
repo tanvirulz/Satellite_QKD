@@ -1,0 +1,12 @@
+python3 alice.py read_data
+python3 bob.py read_data
+python3 alice.py correctdd
+python3 bob.py correctdd
+python3 alice.py sendtt
+python3 bob.py coinmatch
+python3 bob.py sendci
+python3 bob.py genrawkey
+python3 bob.py sendbi
+python3 alice.py genrawkey
+python3 alice.py siftkey
+python3 bob.py siftkey

@@ -18,7 +18,7 @@ default: readRawSwabian.cpp correctTimestamp.cpp coinmatch.cpp sifting.cpp
 	$(CC) -o crt correctTimestamp.cpp 
 	$(CC) -o cm coinmatch.cpp 
 	$(CC) -o grb genRawBasis.cpp
-	$(CC) -o sift sifting.cpp
+	$(CC) -o sift siftkey.cpp
 	$(CC) -o cascade bcascadeDoubling.c mtwister.c
 
 srswabian:
@@ -36,7 +36,7 @@ grb: genRawBasis.cpp
 	$(CC) -o grb genRawBasis.cpp
 
 sift: sifting.cpp
-	$(CC) -o sift sifting.cpp
+	$(CC) -o sift siftkey.cpp
 
 cascade: bcascadeDoubling.c mtwister.c mtwister.h
 	$(CC) -o cascade bcascadeDoubling.c mtwister.c
@@ -53,5 +53,6 @@ clean:
 	rm -f sift 
 	rm -f cascade
 	rm -f srswabian
+	rm -f grb
 
 
