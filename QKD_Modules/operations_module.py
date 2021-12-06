@@ -32,3 +32,7 @@ class OperationsModule:
         command_str ="{ps}/sift {data_dir} {pname}".format(ps=self.protocol_dir,data_dir=self.data_dir,pname=self.pname)
         print(command_str)
         os.system(command_str)
+    def sift_qrand(self):
+        command_str ="{ps}/siftqrand {data_dir} {pname}".format(ps=self.protocol_dir,data_dir=self.data_dir,pname=self.pname)
+        print(command_str)
+        os.system(command_str)

@@ -66,8 +66,14 @@ elif command == "genrawkey":
 
 elif command == "siftkey":
     start = time.time()
-    print("Generating rawkey for [{}]".format("Bob"))
+    print("Generating siftedkey for [{}]".format("Bob"))
     om.sift_key()
+    end = time.time()
+    print("[Done] in {0} seconds".format(end-start))
+elif command == "siftqrand":
+    start = time.time()
+    print("Generating sifted qrand for [{}]".format("Bob"))
+    om.sift_qrand()
     end = time.time()
     print("[Done] in {0} seconds".format(end-start))
 

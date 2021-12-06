@@ -12,7 +12,7 @@ ODIR=./obj
 # nominal compile
 #default: mkobjdir nondeb mem reg  proc $(SDIR)/main.c 
 #	gcc -o run $(ODIR)/memory.o $(ODIR)/registers.o  $(ODIR)/debug.o $(ODIR)/processor.o $(SDIR)/main.c $(IFLAGS) 
-default: readRawSwabian.cpp correctTimestamp.cpp coinmatch.cpp sifting.cpp
+default: readRawSwabian.cpp correctTimestamp.cpp coinmatch.cpp sifting.cpp siftqrand.cpp
 	$(CC) -o rrswabian readRawSwabian.cpp $(IFLAGS) $(LFLAGS)
 	$(CC) -o srswabian stitchRawSwabian.cpp $(IFLAGS) $(LFLAGS)
 	$(CC) -o crt correctTimestamp.cpp 
@@ -20,6 +20,7 @@ default: readRawSwabian.cpp correctTimestamp.cpp coinmatch.cpp sifting.cpp
 	$(CC) -o grb genRawBasis.cpp
 	$(CC) -o sift siftkey.cpp
 	$(CC) -o cascade bcascadeDoubling.c mtwister.c
+	$(CC) -o siftqrand siftqrand.cpp
 
 srswabian:
 	$(CC) -o srswabian stitchRawSwabian.cpp $(IFLAGS) $(LFLAGS)
@@ -37,6 +38,9 @@ grb: genRawBasis.cpp
 
 sift: sifting.cpp
 	$(CC) -o sift siftkey.cpp
+
+siftqrand: siftqrand.cpp
+	$(CC) -o siftqrand siftqrand.cpp
 
 cascade: bcascadeDoubling.c mtwister.c mtwister.h
 	$(CC) -o cascade bcascadeDoubling.c mtwister.c
